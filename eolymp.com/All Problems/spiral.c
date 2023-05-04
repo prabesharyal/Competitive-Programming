@@ -1,9 +1,8 @@
 #include <stdio.h>
-// Comment
 
 int main() {
-    int n,ai,aj;
-    scanf("%d %d %d", &n, &ai, &aj);
+    int n;
+    scanf("%d", &n);
     int k = 1, t = 0;
     int a[n][n];
     
@@ -23,8 +22,12 @@ int main() {
         t++;
     } while (k <= n * n);
 
-    printf("%d ", a[ai-1][aj-1]);
-        
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
 
     return 0;
 }
